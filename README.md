@@ -1,6 +1,7 @@
 # Tutoriais em R
 
 *Lucas Gelape*
+
 *Março de 2020*
 
 Este repositório centraliza os tutoriais em R que eu já produzi para diferentes cursos e workshops. 
@@ -18,5 +19,5 @@ Os conteúdos das aulas foram:
 
 ## Web-scraping
 
-* `RSelenium`: [este tutorial]() sobre a utilização do pacote `RSelenium` foi elaborado para treinamento dos bolsistas do NECI-USP em março de 2020.
+* `RSelenium`: [este tutorial](https://github.com/lgelape/tutoriais_r/blob/master/web_scraping/tutorial_RSelenium.md) sobre a utilização do pacote `RSelenium` foi elaborado para treinamento dos bolsistas do NECI-USP em março de 2020.
 
