@@ -24,7 +24,7 @@ Este tutorial foi produzido em março de 2020. Pacotes (e outros programas/pági
 
 Antes de começarmos a utilizar o `RSelenium` para raspar páginas precisamos realizar algumas etapas preparatórias. Em minhas experiências, a raspagem de dados foi mais bem sucedida ao utilizar o Google Chrome. 
 
-A versão de R e pacotes usados neste tutorial são:
+A versão de R e pacotes usados quando preparei este tutorial foram:
 
 ```r
 sessionInfo()
