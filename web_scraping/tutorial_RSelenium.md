@@ -24,6 +24,25 @@ Este tutorial foi produzido em março de 2020. Pacotes (e outros programas/pági
 
 Antes de começarmos a utilizar o `RSelenium` para raspar páginas precisamos realizar algumas etapas preparatórias. Em minhas experiências, a raspagem de dados foi mais bem sucedida ao utilizar o Google Chrome. 
 
+A versão de R e pacotes usados neste tutorial são:
+
+```r
+sessionInfo()
+# R version 3.6.1 (2019-07-05)
+
+# attached base packages:
+# [1] stats     graphics  grDevices utils     datasets  methods   base     
+
+# other attached packages:
+# [1] stringr_1.4.0   RSelenium_1.7.5
+
+# loaded via a namespace (and not attached):
+# [1] compiler_3.6.1   magrittr_1.5     assertthat_0.2.1 tools_3.6.1     
+# [5] wdman_0.2.4      binman_0.1.1     Rcpp_1.0.3       stringi_1.4.3   
+# [9] caTools_1.17.1.2 openssl_1.4.1    bitops_1.0-6     semver_0.2.0    
+# [13] XML_3.98-1.20    askpass_1.1     
+```
+
 ## Chrome Driver
 
 Para utilizarmos esse navegador, precisamos instalar o [Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/), que é uma ferramenta que permite que um driver Selenium controle um navegador Chrome. O recomendável é utilizar a última versão divulgada (e stable) da sua versão do Chrome ([mais informações sobre como identificar a versão adequada do Chrome Driver podem ser encontradas neste link, em inglês](https://sites.google.com/a/chromium.org/chromedriver/downloads/version-selection)). Na minha versão deste tutorial, estou usando a versão `75.0.3770.140` do driver. Você deve adaptar segundo aquela instalada em seu computador.
@@ -54,7 +73,7 @@ Queremos extrair algumas informações sobre projetos de lei da CMBH. Essas info
 
 Se nossa ideia é automatizar a coleta, como vamos clicar no ícone que desejamos? 
 
-A função `$findElement()` nos ajuda a "encontrar" o elemento de uma página. Nós conseguimos fazer isso ao fornecer o xpath deste elemento. Com a ferramenta de ["inspecionar" um elemento](https://pt.wikihow.com/Inspecionar-um-Elemento-no-Chrome) no Google Chrome, conseguimos acessar o código fonte HTML de qualquer elemento de uma página. Ao acessarmos o código-fonte do hyperlink "pesquisa avançada", podemos simplemente copiar o xpath e incluí-lo como argumento da função ([para maiores informações sobre como ler códigos XML ou HTML, vejam este tutorial do Leonardo Barone](https://github.com/leobarone/cebrap_lab_raspagem_r/blob/master/tutorials/webscraping_tutorial02.Rmd)).
+A função `$findElement()` nos ajuda a "encontrar" o elemento de uma página. Nós conseguimos fazer isso ao fornecer o xpath deste elemento. Com a ferramenta de ["inspecionar" um elemento](https://pt.wikihow.com/Inspecionar-um-Elemento-no-Chrome) no Google Chrome, conseguimos acessar o código fonte HTML de qualquer elemento de uma página. Ao acessarmos o código-fonte do hyperlink "pesquisa avançada", podemos simplemente copiar o xpath e incluí-lo como argumento da função (para maiores informações sobre como ler códigos XML ou HTML, [vejam este tutorial do Leonardo Barone](https://github.com/leobarone/cebrap_lab_raspagem_r/blob/master/tutorials/webscraping_tutorial02.Rmd), ou este [tutorial sobre raspagem de dados em HTML produzido pela Escola de Dados](https://escoladedados.org/tutoriais/xpath-para-raspagem-de-dados-em-html/)).
 
 Para clicar no elemento encontrado, basta usarmos a função `$clickElement()`.
 
